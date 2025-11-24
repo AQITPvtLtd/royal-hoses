@@ -4,7 +4,7 @@ const pool = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "tekbooster",
+    database: "royalhoses",
     waitForConnections: true,
     connectionLimit: 10,  // Kitne max connections ek time me allow hain
     queueLimit: 0,        // Queue limit, 0 means no limit
