@@ -20,7 +20,9 @@ const Info = () => {
             {/* OVERLAY CONTENT */}
             <div className="absolute inset-0 p-10 flex flex-col justify-center text-white">
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-bold mb-3">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-3"
+                        style={{ fontFamily: "Roboto Slab, serif" }}
+                    >
                         Reach Out to Us
                     </h1>
 

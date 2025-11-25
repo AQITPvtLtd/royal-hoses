@@ -6,7 +6,7 @@ const About = () => {
 
             {/* HEADER */}
             <div className='bg-[#293476]'>
-                <h1 className='text-center text-3xl md:text-4xl font-semibold text-white py-16'>
+                <h1 className='text-center text-3xl md:text-4xl font-semibold text-white py-16' style={{ fontFamily: "Roboto Slab, serif" }}>
                     ABOUT
                 </h1>
             </div>

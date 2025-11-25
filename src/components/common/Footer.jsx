@@ -12,7 +12,7 @@ const Footer = () => {
 
                 {/* COLUMN 1 - RavGroup */}
                 <div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-700">RavGroup</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-gray-700" style={{ fontFamily: "Roboto Slab, serif" }}>RavGroup</h3>
                     <p className="text-gray-700 leading-relaxed text-sm">
                         <span className="font-semibold">Rav Group</span> was created to manage
                         the company’s manufacturing, trading, retail & real estate businesses
@@ -22,7 +22,7 @@ const Footer = () => {
 
                 {/* COLUMN 2 - Sub-Companies */}
                 <div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-700">Sub-Companies</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-gray-700" style={{ fontFamily: "Roboto Slab, serif" }}>Sub-Companies</h3>
 
                     <ul className="space-y-2 text-sm text-gray-700">
                         <li>
@@ -40,7 +40,7 @@ const Footer = () => {
 
                 {/* COLUMN 3 - Quick Links */}
                 <div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-700">Quick Links</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-gray-700" style={{ fontFamily: "Roboto Slab, serif" }}>Quick Links</h3>
 
                     <ul className="space-y-2 text-sm text-gray-700">
                         <li>
@@ -49,7 +49,7 @@ const Footer = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/products" className="hover:text-gray-900 transition">
+                            <Link href="/our-products" className="hover:text-gray-900 transition">
                                 Our Products
                             </Link>
                         </li>
@@ -63,7 +63,7 @@ const Footer = () => {
 
                 {/* COLUMN 4 - Reach Out to Us */}
                 <div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-700">Reach Out to Us</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-gray-700" style={{ fontFamily: "Roboto Slab, serif" }}>Reach Out to Us</h3>
 
                     <div className="space-y-3 text-gray-700 text-sm">
 

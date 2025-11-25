@@ -30,7 +30,7 @@ export default function Header() {
                     <Link href="/about" className="text-[#172a55] font-bold hover:text-black transition">
                         ABOUT
                     </Link>
-                    <Link href="/products" className="text-[#172a55] font-bold hover:text-black transition">
+                    <Link href="/our-products" className="text-[#172a55] font-bold hover:text-black transition">
                         OUR PRODUCTS
                     </Link>
                     <Link href="/contact" className="text-[#172a55] font-bold hover:text-black transition">
@@ -57,7 +57,7 @@ export default function Header() {
                         <Link href="/about" onClick={() => setNavOpen(false)} className="text-[#172a55] font-medium">
                             ABOUT
                         </Link>
-                        <Link href="/products" onClick={() => setNavOpen(false)} className="text-[#172a55] font-medium">
+                        <Link href="/our-products" onClick={() => setNavOpen(false)} className="text-[#172a55] font-medium">
                             OUR PRODUCTS
                         </Link>
                         <Link href="/contact" onClick={() => setNavOpen(false)} className="text-[#172a55] font-medium">

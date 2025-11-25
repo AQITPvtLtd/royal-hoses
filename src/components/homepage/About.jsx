@@ -9,7 +9,7 @@ const About = () => {
 
                 {/* LEFT CONTENT BOX */}
                 <div className="bg-[#fafafa] border border-gray-200 p-6 md:p-10 rounded-4xl shadow-sm">
-                    <h1 className="font-bold text-2xl md:text-3xl text-[#293476] mb-4">
+                    <h1 className="font-bold text-2xl md:text-3xl text-[#293476] mb-4" style={{ fontFamily: "Roboto Slab, serif" }}>
                         ABOUT US
                     </h1>
 

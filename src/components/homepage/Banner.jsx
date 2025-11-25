@@ -15,7 +15,9 @@ export default function Banner() {
 
             {/* Content Overlay */}
             <div className="relative z-10 max-w-6xl mx-10 px-5">
-                <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight mb-5">
+                <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight mb-5"
+                    style={{ fontFamily: "Roboto Slab, serif" }}
+                >
                     Innovative PVC Solutions for Every Industry
                 </h1>
 
