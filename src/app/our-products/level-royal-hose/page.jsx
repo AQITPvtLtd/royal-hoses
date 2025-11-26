@@ -3,8 +3,8 @@ import Levelroyal from './Levelroyal'
 
 const page = () => {
   return (
-    <div>
-        <Levelroyal />
+    <div className='pt-28 bg-white'>
+      <Levelroyal />
     </div>
   )
 }

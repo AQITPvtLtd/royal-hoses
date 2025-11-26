@@ -2,15 +2,14 @@
 import React from "react";
 import Link from "next/link";
 import { HiOutlinePhone, HiOutlineLocationMarker, HiOutlineUser } from "react-icons/hi";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const Footer = () => {
     return (
         <footer className="bg-white w-full border-t pt-12">
-
             {/* MAIN GRID */}
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-
-                {/* COLUMN 1 - RavGroup */}
+            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 pb-4">
                 <div>
                     <h3 className="text-xl font-semibold mb-3 text-gray-700" style={{ fontFamily: "Roboto Slab, serif" }}>RavGroup</h3>
                     <p className="text-gray-700 leading-relaxed text-sm">
@@ -18,6 +17,45 @@ const Footer = () => {
                         the company’s manufacturing, trading, retail & real estate businesses
                         and to provide for strategic direction for their growth.
                     </p>
+
+
+                    <nav className="flex flex-col p-4 space-y-2">
+
+                        <div className="flex items-center gap-4">
+
+
+                            <Link
+                                href="https://www.facebook.com/people/Royal-Hoses/61583936131671/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Facebook"
+                                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center"
+                            >
+                                <FaFacebookF size={20} className="text-[#1877F2]" />
+                            </Link>
+
+                            <Link
+                                href="https://www.instagram.com/royal_hoses/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center"
+                            >
+                                <FaInstagram size={20} className="text-[#E4405F]" />
+                            </Link>
+
+                            <Link
+                                href="https://maps.app.goo.gl/ipp9yB6UTN1QerEZ6"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Facebook"
+                                className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center"
+                            >
+                                <FcGoogle size={20} />
+                            </Link>
+                        </div>
+                    </nav>
+
                 </div>
 
                 {/* COLUMN 2 - Sub-Companies */}
@@ -26,12 +64,12 @@ const Footer = () => {
 
                     <ul className="space-y-2 text-sm text-gray-700">
                         <li>
-                            <Link href="#" className="hover:text-gray-900 transition">
+                            <Link href="https://brightchoice.tekbooster.com/" className="hover:text-gray-900 transition">
                                 Bright Choice Trading LLC
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" className="hover:text-gray-900 transition">
+                            <Link href="/" className="hover:text-gray-900 transition">
                                 Royale Hoses
                             </Link>
                         </li>
@@ -106,10 +144,15 @@ const Footer = () => {
             </div>
 
             {/* COPYRIGHT BAR */}
-            <div className="mt-10 w-full bg-black py-3">
-                <p className="text-center text-white text-sm">
-                    Copyright @RavGroup 2024. All Rights Reserved.
+            <div className='text-center text-white bg-gray-900 py-1.5'>
+                <p className='font-semibold text-sm md:text-base'>
+                    <Link href='https://tekbooster.com' target='_blank' style={{ fontFamily: "Roboto Slab, serif" }}>
+                        Design & Developed By Tek Booster <br className="block md:hidden" /> (Digital Marketing Company)
+                    </Link>
                 </p>
+                {/* <p className='font-semibold text-sm md:text-base' style={{ fontFamily: "Roboto Slab, serif" }}>
+                    (Powered by AQIT Pvt Ltd)
+                </p> */}
             </div>
 
         </footer>

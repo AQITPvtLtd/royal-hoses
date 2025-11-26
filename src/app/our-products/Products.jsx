@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const products = [
     { src: "/products/level-royal-hose.jpg", title: "Level Royal Hose", link: "/our-products/level-royal-hose" },
@@ -16,40 +18,81 @@ const products = [
 ];
 
 const Products = () => {
+
+    // Down-to-up heading animation
+    const fadeUp = {
+        hidden: { opacity: 0, y: 30 },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, ease: "easeOut" }
+        }
+    };
+
+    // Card animation (staggered)
+    const cardAnimation = {
+        hidden: { opacity: 0, y: 40 },
+        show: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.7,
+                ease: "easeOut",
+                delay: i * 0.15, // one by one
+            }
+        }),
+    };
+
     return (
         <section className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4">
 
-                {/* Heading */}
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900"
+                {/* Heading Animation */}
+                <motion.h2
+                    variants={fadeUp}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }} // ONE TIME animation
+                    className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900"
                     style={{ fontFamily: "Roboto Slab, serif" }}
                 >
                     Our Products
-                </h2>
+                </motion.h2>
 
-                {/* Products Grid */}
+                {/* Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {products.map((item, index) => (
-                        <Link
+                        <motion.div
                             key={index}
-                            href={item.link}
-                            target={item.link.startsWith("http") ? "_blank" : "_self"}
-                            className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 group block"
+                            custom={index}
+                            variants={cardAnimation}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true, amount: 0.2 }} // one time per card
                         >
-                            <div className="overflow-hidden rounded-lg">
-                                <Image
-                                    src={item.src}
-                                    alt={item.title}
-                                    width={500}
-                                    height={500}
-                                    className="w-full h-64 object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300"
-                                />
-                            </div>
+                            <Link
+                                href={item.link}
+                                target={item.link.startsWith("http") ? "_blank" : "_self"}
+                                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 group block"
+                            >
+                                <div className="overflow-hidden rounded-lg">
+                                    <Image
+                                        src={item.src}
+                                        alt={item.title}
+                                        width={500}
+                                        height={500}
+                                        className="w-full h-64 object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                </div>
 
-                            <h3 className="text-lg font-semibold text-gray-800 mt-4 text-center" style={{ fontFamily: "Roboto Slab, serif" }}>
-                                {item.title}
-                            </h3>
-                        </Link>
+                                <h3
+                                    className="text-lg font-semibold text-gray-800 mt-4 text-center"
+                                    style={{ fontFamily: "Roboto Slab, serif" }}
+                                >
+                                    {item.title}
+                                </h3>
+                            </Link>
+                        </motion.div>
                     ))}
                 </div>
             </div>

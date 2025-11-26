@@ -1,41 +1,72 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Banner() {
-    return (
-        <section className="relative w-full h-[80vh] md:h-[90vh] flex items-center">
+    const fadeUp = {
+        hidden: { opacity: 0, y: 40 },
+        show: (delay = 0) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut",
+                delay,
+            },
+        }),
+    };
 
+    return (
+        <section className="relative w-full h-[80vh] md:h-[90vh] flex items-center overflow-hidden">
             {/* Background Image */}
             <Image
-                src="/banner/banner.jpeg"   // ← Replace with your actual image path
+                src="/banner/banner.jpeg"
                 alt="Banner"
                 fill
                 className="object-cover brightness-[0.65]"
                 priority
             />
 
-            {/* Content Overlay */}
             <div className="relative z-10 max-w-6xl mx-10 px-5">
-                <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight mb-5"
+
+                {/* Heading – Animate on scroll every time */}
+                <motion.h1
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, amount: 0.3 }} // 👈 Repeats animation on every scroll
+                    custom={0}
+                    variants={fadeUp}
+                    className="text-white text-3xl md:text-5xl font-bold leading-tight mb-5"
                     style={{ fontFamily: "Roboto Slab, serif" }}
                 >
                     Innovative PVC Solutions for Every Industry
-                </h1>
+                </motion.h1>
 
-                <p className="text-white md:text-lg leading-relaxed max-w-5xl mb-8">
-                    Royal Hoses, with state-of-the-art manufacturing facilities in the Middle East and
-                    extensive industry experience, specializes in high-quality PVC solutions for a wide range
-                    of applications. From irrigation, drainage, and landscaping in civil projects to plumbing,
-                    water storage, and dewatering in construction, and even meeting the demands of industries
-                    like chemicals, oil & gas, food & beverages, and automotive, our products are designed to
-                    deliver reliable performance across diverse sectors.
-                </p>
+                {/* Paragraph – delayed after heading */}
+                <motion.p
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, amount: 0.3 }}
+                    custom={0.2}
+                    variants={fadeUp}
+                    className="text-white md:text-lg leading-relaxed max-w-5xl mb-8"
+                >
+                    Royal Hoses, with state-of-the-art manufacturing facilities in the Middle East and extensive industry experience, specializes in high-quality PVC solutions for a wide range of applications. From irrigation, drainage, and landscaping in civil projects to plumbing, water storage, and dewatering in construction, and even meeting the demands of industries like chemicals, oil & gas, food & beverages, and automotive, our products are designed to deliver reliable performance across diverse sectors.
+                </motion.p>
 
-                {/* Button */}
-                <button className="px-6 py-3 bg-[#172a55] text-white rounded-full text-sm md:text-base hover:bg-[#111e40] transition">
+                {/* Button – delayed after paragraph */}
+                <motion.button
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, amount: 0.3 }}
+                    custom={0.4}
+                    variants={fadeUp}
+                    className="px-6 py-3 bg-[#172a55] text-white rounded-full text-sm md:text-base hover:bg-[#111e40] transition"
+                >
                     Know More
-                </button>
-            </div>
+                </motion.button>
 
+            </div>
         </section>
     );
 }

@@ -6,7 +6,9 @@ import Products from "./our-products/Products";
 export default function Home() {
   return (
     <div className="bg-white">
-      <Banner />
+      <div className="pt-16">
+        <Banner />
+      </div>
       <About />
       <Products />
       <Contact />

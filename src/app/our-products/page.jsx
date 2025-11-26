@@ -3,7 +3,7 @@ import Products from './Products'
 
 const page = () => {
     return (
-        <div>
+        <div className='pt-28 bg-white'>
             <Products />
         </div>
     )
