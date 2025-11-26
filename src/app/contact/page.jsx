@@ -4,7 +4,7 @@ import Info from './Info'
 import Location from './Location'
 const Page = () => {
     return (
-        <div>
+        <div className='pt-28 bg-white'>
             <div className='bg-[#293476]'>
                 <h1 className='text-center text-3xl md:text-4xl font-semibold text-white py-16'>
                     CONTACT
