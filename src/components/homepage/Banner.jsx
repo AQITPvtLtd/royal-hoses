@@ -36,7 +36,7 @@ export default function Banner() {
                     viewport={{ once: false, amount: 0.3 }} // 👈 Repeats animation on every scroll
                     custom={0}
                     variants={fadeUp}
-                    className="text-white text-3xl md:text-5xl font-bold leading-tight mb-5"
+                    className="text-white text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-5"
                     style={{ fontFamily: "Roboto Slab, serif" }}
                 >
                     Innovative PVC Solutions for Every Industry
@@ -49,7 +49,7 @@ export default function Banner() {
                     viewport={{ once: false, amount: 0.3 }}
                     custom={0.2}
                     variants={fadeUp}
-                    className="text-white md:text-lg leading-relaxed max-w-5xl mb-8"
+                    className="text-white md:text-lg leading-relaxed max-w-5xl md:mb-8 mb-4 text-sm"
                 >
                     Royal Hoses, with state-of-the-art manufacturing facilities in the Middle East and extensive industry experience, specializes in high-quality PVC solutions for a wide range of applications. From irrigation, drainage, and landscaping in civil projects to plumbing, water storage, and dewatering in construction, and even meeting the demands of industries like chemicals, oil & gas, food & beverages, and automotive, our products are designed to deliver reliable performance across diverse sectors.
                 </motion.p>
