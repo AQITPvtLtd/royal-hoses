@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 export default function Banner() {
     const fadeUp = {
         hidden: { opacity: 0, y: 40 },
@@ -55,16 +55,19 @@ export default function Banner() {
                 </motion.p>
 
                 {/* Button – delayed after paragraph */}
-                <motion.button
+                <motion.div
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: false, amount: 0.3 }}
                     custom={0.4}
                     variants={fadeUp}
-                    className="px-6 py-3 bg-[#172a55] text-white rounded-full text-sm md:text-base hover:bg-[#111e40] transition"
                 >
-                    Know More
-                </motion.button>
+                    <Link href="/about">
+                        <button className="px-6 cursor-pointer py-3 bg-[#172a55] text-white rounded-full text-sm md:text-base hover:bg-[#111e40] transition">
+                            Know More
+                        </button>
+                    </Link>
+                </motion.div>
 
             </div>
         </section>

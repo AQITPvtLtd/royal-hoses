@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 const About = () => {
 
     // Left to Right Animation
@@ -59,9 +59,11 @@ const About = () => {
                         sectors it has worked in. This has facilitated its regional and global spread.
                     </p>
 
-                    <button className="px-6 py-3 bg-[#172a55] text-white rounded-full text-sm md:text-base hover:bg-[#111e40] transition">
+                    <Link className="px-6 cursor-pointer py-3 bg-[#172a55] text-white rounded-full text-sm md:text-base hover:bg-[#111e40] transition"
+                    href="/about"
+                    >
                         Know More
-                    </button>
+                    </Link>
                 </motion.div>
 
                 {/* RIGHT IMAGE */}

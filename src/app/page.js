@@ -9,8 +9,8 @@ export default function Home() {
       <div className="pt-28">
         <Banner />
       </div>
-      <About />
       <Products />
+      <About />
       <Contact />
     </div>
   );
