@@ -144,7 +144,7 @@ const Footer = () => {
             </div>
 
             {/* COPYRIGHT BAR */}
-            <div className='text-center text-white bg-gray-900 py-1.5'>
+            <div className='text-center text-white bg-[#172a55] py-1.5'>
                 <p className='font-semibold text-sm md:text-base'>
                     <Link href='https://tekbooster.com' target='_blank' style={{ fontFamily: "Roboto Slab, serif" }}>
                         Design & Developed By Tek Booster <br className="block md:hidden" /> (Digital Marketing Company)

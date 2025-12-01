@@ -59,16 +59,16 @@ const Products = () => {
                     Our Products
                 </motion.h2>
 
-                {/* Grid */}
+                {/* Grid - First 8 Products */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {products.map((item, index) => (
+                    {products.slice(0, products.length - 2).map((item, index) => (
                         <motion.div
                             key={index}
                             custom={index}
                             variants={cardAnimation}
                             initial="hidden"
                             whileInView="show"
-                            viewport={{ once: true, amount: 0.2 }} // one time per card
+                            viewport={{ once: true, amount: 0.2 }}
                         >
                             <Link
                                 href={item.link}
@@ -95,6 +95,45 @@ const Products = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Last 2 Products Centered */}
+                <div className="mt-10 flex justify-center gap-4 flex-wrap">
+                    {products.slice(-2).map((item, index) => (
+                        <motion.div
+                            key={index}
+                            custom={index}
+                            variants={cardAnimation}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true, amount: 0.2 }}
+                            className="flex justify-center"
+                        >
+                            <Link
+                                href={item.link}
+                                target={item.link.startsWith("http") ? "_blank" : "_self"}
+                                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-5 group block max-w-xs"
+                            >
+                                <div className="overflow-hidden rounded-lg">
+                                    <Image
+                                        src={item.src}
+                                        alt={item.title}
+                                        width={500}
+                                        height={500}
+                                        className="w-full h-64 object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                </div>
+
+                                <h3
+                                    className="text-lg font-semibold text-gray-800 mt-4 text-center"
+                                    style={{ fontFamily: "Roboto Slab, serif" }}
+                                >
+                                    {item.title}
+                                </h3>
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div>
+
             </div>
         </section>
     );
